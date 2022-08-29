@@ -1,0 +1,24 @@
+<%- js('js/dom-event.min.js') %>
+<% if(page.layout === 'repository') { %>
+    <div class="hidden invisible" id="github-username"><%= theme.github.username %></div>
+    <%- js('js/repository.min.js') %>
+<% } %>
+<% if (!is_home() && !is_category() && !is_tag() && !is_archive() && page.comments && theme.comment.type) { %>
+    <%- partial(`_comment/${theme.comment.type}`) %>
+<% } %>
+<% if (theme.fancybox) { %>
+    <script src="<%= theme.cdn.lightgallery_js %>"></script>
+    <%- js('js/light-gallery.min.js') %>
+<% } %>
+<% if (page.aplayer) { %>
+    <script defer src="<%= theme.cdn.aplayer %>"></script>
+<% } %>
+<% if ( theme.site.service_worker ) { %>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('<%=theme.site.service_worker %>').then(function() {
+          console.log('ServiceWorker has been registered!');
+        }).catch(console.error);
+      }
+    </script>
+<% } %>
