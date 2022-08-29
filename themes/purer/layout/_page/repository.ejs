@@ -1,0 +1,19 @@
+<style>
+    .aside-fixture {
+        display: none !important;
+    }
+    .main-section {
+        max-width: unset;
+    }
+</style>
+<main class="flex-1 px-4 py-14 md:px-5 lg:px-8 lg:py-4 relative min-h-screen">
+    <article class="content article article-archives article-type-list" itemscope="">
+        <header class="article-header">
+            <h1 itemprop="title"><%= page.title %></h1>
+            <p class="text-gray-600">I have <span id="repo-count">0</span> projects on GitHub </p>
+        </header>
+        <div id="repo-root" class="article-body">
+        </div>
+    </article>
+    <%- partial('_partial/pagination', {type: 'page'}) %>
+</main>
