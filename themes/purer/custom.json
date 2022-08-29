@@ -1,0 +1,11 @@
+{
+	"logo_url":"/images/logo.svg",
+	"ico":"/images/favicon.ico",
+	"url":"/source/images/",
+	"alink":["footer_links",""],
+	"link":[{
+	"name":"",
+	"link":""
+	}],
+	"color":["#FFFFCC","#CCFFFF","#FFCCCC","#99CCCC","#FFCC99","#FF9999","#996699","#CC9999","#CCCCCC","#ffffff","#CCCCFF"]
+}
