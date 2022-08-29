@@ -1,0 +1,15 @@
+<footer class="lg:block fixed bottom-0 left-0 sm:w-1/12 lg:w-1/6 bg-gray-100 z-40">
+    
+    <div class="footer-social-links">
+       <% if (theme.footer_links && theme.footer_links.length){ %>
+                    <% theme.footer_links.forEach(function(item){ %>
+                      <a href="<%- item.link %>" class="animsition-link"><%= item.name %></a>
+                    <% }); %>
+            <% } %>
+    </div>
+
+    <% if(theme.footer && theme.footer.custom ) { %>
+        <p class="footer-custom"><%- theme.footer.custom %></p>
+        <p class="theme-brand">Theme by <a href="https://github.com/fengkx/hexo-theme-purer" rel="nofollow noopener noreferrer">hexo-theme-purer</a></p>
+    <% } %>
+</footer>
